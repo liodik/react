@@ -18,17 +18,16 @@ class Clock extends Component {
         };
     
       
+        setInterval(() => {
+            this.setState({
+                time: getTimeWithOffset(this.props.offset)
+            });
+            
+          }, 1000);
+
     }
-    componentDidMount() {
-        this.timerID = setInterval(
-          () => this.tick(),
-          1000 );
-      }
-    tick() {
-        this.setState({
-          time: getTimeWithOffset(this.props.offset),
-        });
-      }
+
+
 
          render() {
         return (
@@ -43,6 +42,5 @@ class Clock extends Component {
         );
     }
 }
-
 
 export default Clock;
