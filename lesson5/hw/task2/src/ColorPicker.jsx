@@ -4,11 +4,14 @@ class ColorPicker extends Component {
   constructor() {
     super();
     this.state = {
-      titleText: 'Color',
+      titleText: '',
     };
   }
   setPickerTitle = colorName => {
     this.setState({ titleText: colorName });
+  };
+  clearPickerTitle = () => {
+    this.setState({ titleText: '' });
   };
   render() {
     return (
@@ -17,15 +20,18 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onClick={() => this.setPickerTitle('Coral')}
+            onMouseOver={() => this.setPickerTitle('Coral')}
+            onMouseLeave={() => this.clearPickerTitle()}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onClick={() => this.setPickerTitle('Aqua')}
+            onMouseOver={() => this.setPickerTitle('Aqua')}
+            onMouseLeave={() => this.clearPickerTitle()}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onClick={() => this.setPickerTitle('Bisque')}
+            onMouseOver={() => this.setPickerTitle('Bisque')}
+            onMouseLeave={() => this.clearPickerTitle()}
           ></button>
         </div>
       </div>
