@@ -9,7 +9,7 @@ class Toggler extends Component {
   }
   toggler = e => {
     e.target.textContent === 'Off'
-      ? this.setState({ buttonText: 'Onn' })
+      ? this.setState({ buttonText: 'On' })
       : this.setState({ buttonText: 'Off' });
   };
 
