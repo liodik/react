@@ -11,20 +11,20 @@ class Auth extends Component {
       isLoggedIn: false,
     };
   }
-  onLogin = () => {
+  handleLogin = () => {
     this.setState({ isLoggedIn: true });
   };
-  onLogout = () => {
+  handleLogout = () => {
     this.setState({ isLoggedIn: false });
   };
 
   render() {
     let button;
-    console.log(this.state.isLoggedIn);
+
     if (this.state.isLoggedIn) {
-      button = <Logout onClick={this.onLogout} />;
+      button = <Logout onLogout={this.handleLogout} />;
     } else {
-      button = <Login onClick={this.onLogin} />;
+      button = <Login onLogin={this.handleLogin} />;
     }
     return (
       <div className="panel">
