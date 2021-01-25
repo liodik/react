@@ -4,19 +4,19 @@ class Toggler extends Component {
   constructor() {
     super();
     this.state = {
-      buttonText: 'Off',
+      isToogleOn: false,
     };
   }
-  toggler = e => {
-    e.target.textContent === 'Off'
-      ? this.setState({ buttonText: 'On' })
-      : this.setState({ buttonText: 'Off' });
+  toggler = () => {
+    this.setState({
+      isToogleOn: !this.state.isToogleOn,
+    });
   };
 
   render() {
     return (
       <button className="toggler" onClick={this.toggler}>
-        {this.state.buttonText}
+        {this.state.isToogleOn ? 'On' : 'Off'}
       </button>
     );
   }
