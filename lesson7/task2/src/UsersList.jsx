@@ -6,7 +6,7 @@ class UsersList extends Component {
     sorting: null,
   };
   toggleSorting = () => {
-    const newSorting = this.state.sorting === 'asc' ? 'decs' : 'asc';
+    const newSorting = this.state.sorting === 'asc' ? 'desc' : 'asc';
     this.setState({
       sorting: newSorting,
     });
@@ -17,7 +17,7 @@ class UsersList extends Component {
     if (this.state.sorting) {
       usersList = this.props.users
         .slice()
-        .sort((b, a) => (this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age));
+        .sort((a, b) => (this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age));
     } else {
       usersList = this.props.users;
     }
@@ -29,7 +29,7 @@ class UsersList extends Component {
         </button>
         <ul className="users">
           {usersList.map(user => (
-            <User key={user.id} name={user.name} age={user.age} />
+            <User key={user.id} {...user} />
           ))}
         </ul>
       </div>
