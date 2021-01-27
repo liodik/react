@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Life from './Life.jsx';
+import Demo from './Demo';
+import './index.scss';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<Life number={100} />, rootElement);
+ReactDOM.render(<Demo />, rootElement);
