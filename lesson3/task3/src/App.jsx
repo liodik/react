@@ -11,7 +11,7 @@ const App = () => {
         <Comment 
     author={UserInfo}
     text="good job"
-    date={new Date(new Date())}
+    date={new Date()}
     />
     );
 }

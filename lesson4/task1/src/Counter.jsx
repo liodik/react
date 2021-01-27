@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './counter.scss'
-let counter = 0;
 
 
 
