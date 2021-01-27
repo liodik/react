@@ -17,11 +17,11 @@ class Life extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     this.props;
-    console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
+    console.log(`componentDidUpdate(prevProps, prevState): some updates based on new props`);
   }
 
   componentWillUnmount() {
-    console.log('cleanup before DOM related to component will be removed');
+    console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
   }
 
   render() {
