@@ -1,8 +1,8 @@
 import React from 'react';
 
-const User = ({ name, age }) => {
+const User = ({ name, age, id }) => {
   return (
-    <li className="user" key={(Math.random() * 1000).toFixed()}>
+    <li className="user" key={id}>
       <span className="user__name">{name}</span>
       <span className="user__age">{age}</span>
     </li>

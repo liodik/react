@@ -19,7 +19,7 @@ class UsersList extends Component {
     const usersList = this.props.users
       .filter(user => user.name.toLowerCase().includes(filterText.toLowerCase()))
       .map(user => {
-        return <User key={(Math.random() * 1000).toFixed()} {...user} />;
+        return <User key={user.id} {...user} />;
       });
     return (
       <div>
