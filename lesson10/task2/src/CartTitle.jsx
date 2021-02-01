@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartTitle = ({ userName, count }) => {
   return (
-    <div className="cart-title">{`${userName.firstName} ${userName.lastName}, you added ${count} products`}</div>
+    <h3 className="cart-title">{`${userName.firstName} ${userName.lastName}, you added ${count} products`}</h3>
   );
 };
 
