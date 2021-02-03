@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import User from './User';
 
 const App = () => {
   return (
     <div className="page">
-      <BrowserRouter>
+      <Router>
         <div className="page__content">
           <h1>Users</h1>
           <ul className="navigation">
@@ -25,7 +25,7 @@ const App = () => {
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };
