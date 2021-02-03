@@ -21,7 +21,7 @@ const App = () => {
               <User />
             </Route>
             <Route path="/">
-              <span> Select a user please</span>
+              <span>Select a user please</span>
             </Route>
           </Switch>
         </div>
