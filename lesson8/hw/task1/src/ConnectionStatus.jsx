@@ -25,12 +25,10 @@ class ConnectionStatus extends Component {
   };
 
   render() {
-    let className = 'status';
-    if (this.state.status === 'offline') {
-      className += ' status_offline';
-    }
+    const { status } = this.state;
+    const className = `status ${status === 'offline' ? 'status_offline' : ''}`;
 
-    return <div className={className}>{this.state.status}</div>;
+    return <div className={className}>{status}</div>;
   }
 }
 
